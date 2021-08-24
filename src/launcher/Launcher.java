@@ -2,7 +2,7 @@ package launcher;
 
 import entities.Student;
 import gui.SimplePresentationScreen;
-//import logic.SetAgent;
+import logic.SetAgent;
 public class Launcher {
 	
 	public static void main(String [] args) {
@@ -13,11 +13,11 @@ public class Launcher {
 		
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-            	//SetAgent setter;
+            	SetAgent setter;
             	Student studentData = null;
             	
-            	//setter = new SetAgent();
-            	//studentData = setter.SetAll(studentData);
+            	setter = new SetAgent();
+            	studentData = setter.SetAll(studentData);
 				SimplePresentationScreen PScreen = new SimplePresentationScreen(studentData);
 				PScreen.setVisible(true);
             }
